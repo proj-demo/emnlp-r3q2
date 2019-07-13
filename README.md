@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## Future Work
+### Since word2vec embedding should contain semantics of the words already, synonyms should have similar embedding. How is the synonyms extension to relation indicators useful?  
+<br />
 
-You can use the [editor on GitHub](https://github.com/proj-demo/emnlp-r3q2/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/proj-demo/emnlp-r3q2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+##### In our work, Synonyms from Thesaurus.com are used to broaden the coverage of relation indicators in order to form a robust relational semantic space, which aims to capture the keywords of relations precisely.
+##### The reason why we use external knowledge base instead of relying on pre-trained word vectors is that the synonyms obtained by Thesaurus.com is more reliable and accurate, whereas the pre-trained word vectors often produce unsatisfactory results regarding the cosine similarity of words. For example, the similarity between "good" and "bad" is 0.72, whereas the similarity between "good" and "amazing" is only 0.48.  Such errors and unexpected results will introduce more noise to our model. 
+##### Although fine-tuning during training may adjust the word vectors to better suit for our task, more training data and model capacity are needed. This is exactly our motivation to incorporate external knowledge to deep neural network to reduce its reliance on training data while improving its performance. 
