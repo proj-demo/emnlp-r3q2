@@ -1,4 +1,4 @@
-## Future Work
+## Effectiveness of Synonyms
 ### Since word2vec embedding should contain semantics of the words already, synonyms should have similar embedding. How is the synonyms extension to relation indicators useful?  
 <br />
 
